@@ -13,9 +13,8 @@ A python3 script to read tables copied from online sources into a FoundryVTT com
   - Smart handling of currency
 
 The python script takes a file that can contain any number of tables as csv (or any other value separated format). I've typically just pasted an entire D&DBeyond page and deleted all the text between tables.
-Each table should have the format
 
-So far only tested on python3.8 on Ubuntu
+N.B. So far only tested on python3.8 on Ubuntu
 
 Usage:
 ```
