@@ -20,6 +20,8 @@ Usage:
 ```
 Create compendium:
 python table_to_json.py treasure.csv --separator $'\t' --compendium treasure.json
+You might not need/need a different separator, my browser splits the cells by tabs when I copy from DDB but the script assumes
+a default of ',' as the separator
 
 Output Individual tables as json files in local directory
 python table_to_json.py treasure.csv --separator $'\t' --dir .
