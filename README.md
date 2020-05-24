@@ -2,7 +2,7 @@
 Collection of random scripts I use for FoundryVTT
 
 ## table_to_json.py
-A python script to read tables copied from online sources into a FoundryVTT compatible JSON format. It has several particularly useful features:
+A python3 script to read tables copied from online sources into a FoundryVTT compatible JSON format. It has several particularly useful features:
 - Auto subtable generation
 - Auto generation of multiple tables from NxM arrays
 - Dice roll formatting
@@ -15,13 +15,24 @@ A python script to read tables copied from online sources into a FoundryVTT comp
 The python script takes a file that can contain any number of tables as csv (or any other value separated format). I've typically just pasted an entire D&DBeyond page and deleted all the text between tables.
 Each table should have the format
 
+So far only tested on python3.8 on Ubuntu
+
+Usage:
+```
+Create compendium:
+python table_to_json.py treasure.csv --separator $'\t' --compendium treasure.json
+
+Output Individual tables as json files in local directory
+python table_to_json.py treasure.csv --separator $'\t' --dir .
+```
+
+The input csv files should contain tables with the format
 ```
 [Title]
 [range],[data]
 [range],[data]
 ```
-
-table_to_json also supports tables with multiple columns
+But in practice its quite flexible. The script also supports tables with multiple columns
 ```
 Food Table
 Roll,Poor,Rich
