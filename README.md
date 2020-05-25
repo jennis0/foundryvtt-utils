@@ -1,7 +1,7 @@
 # foundryvtt-utils
 Collection of random scripts I use for FoundryVTT
 
-## table_to_json.py
+## table_importer.py
 A python3 script to read tables copied from online sources into a FoundryVTT compatible JSON format. It has several particularly useful features:
 - Auto subtable generation
 - Auto generation of multiple tables from NxM arrays
@@ -19,12 +19,12 @@ N.B. So far only tested on python3.8 on Ubuntu
 Usage:
 ```
 Create compendium:
-python table_to_json.py treasure.csv --separator $'\t' --compendium treasure.json
+python table_importer.py treasure.csv --separator $'\t' --compendium treasure.json
 You might not need/need a different separator, my browser splits the cells by tabs when I copy from DDB but the script assumes
 a default of ',' as the separator
 
 Output Individual tables as json files in local directory
-python table_to_json.py treasure.csv --separator $'\t' --dir .
+python table_importer.py treasure.csv --separator $'\t' --dir .
 ```
 
 The input csv files should contain tables with the format
